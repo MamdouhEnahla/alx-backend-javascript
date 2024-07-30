@@ -1,9 +1,11 @@
+/**
+ * Retrieves ids from a list of students
+ */
 export default function getListStudentIds(students) {
-    if (!Array.isArray(students)) {
+    if (!(students instanceof Array)) {
         return [];
     }
 
-    const listIds =  students.map(student => student.id);
-    return listIds;
+    return students.map(student => student.id);
 }
 
